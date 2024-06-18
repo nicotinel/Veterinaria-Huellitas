@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veterinaria Huellitas</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <!-- <h1 id="titulo">Veterinaria Huellitas</h1> -->
+      <a href="index.html">
+        <img src="img/veterinaria.png" alt="Veterinaria Huellitas" />
+      </a>
+      <nav>        
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="ubicacion.html">Ubicación</a></li>
+          <li><a href="contacto.html">Contacto</a> </li>
+          <li><a href="http://Educacionit.com" target="_blank">Educacion It</a></li>          
+       </ul>
+      </nav>
+    </header>
+    <main>
+        <section class="contacto">
+            <h2>Contacto</h2>
+            <p>Estamos aqui para ayudarte. Si tienes alguna pregunta o necesitas mas información sobre nuestros servicios</p>
+            <p>
+                Tambien podes enviarnos un correo electronico a 
+                <a href="mailto:info@veterinariahuellitas.com.ar">info@veterinariahuellitas.com.ar</a>
+                o llamarnos al
+                <a href="tel:+54911-1234567890">+911-1234567890</a>
+                <a href="https://api.whatsapp.com/send/?phone=541911234567890" target="_blank">
+                    <img src="img/whatsapp.png" alt="">
+                </a>
+            </p>
+            <hr>
+            <form action="codigo.php">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre"/>
+
+                <label for="email">Correo electronico:</label>
+                <input type="email" id="email" name="email" required placeholder="Ingresa tu email"/>
+                
+                <label for="tel">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="Ingresa tu número de teléfono"/>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Derechos reservados Veterinaria Huellitas ©2024</p>
+    </footer>
+  </body>
+</html>

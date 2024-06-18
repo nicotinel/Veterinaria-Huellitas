@@ -1,0 +1,123 @@
+/* Paleta de Colores */
+:root{
+    --primary-color: #297e10;
+    --secondary-color: #f9f9f9;
+    --text-color: #333;
+    --white: #ffffff;
+}
+
+/* Estilos Generales*/
+head{}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+}
+header{
+    padding: 15px 20px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: rgb(213, 4, 255);
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+nav ul li{
+    display: inline;
+    margin-right: 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+#titulo{
+    color: #297e10;
+    front-size: 2em;
+    margin: 0;
+}
+.birnvenida{
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilos especificos por pagina*/
+
+/* Pagina "Contacto" */
+
+/* Pagina "Nosotros" */
+
+/* Pagina "Galeria" */
+
+/* Pagina "Index" */
+
+/* Pagina "Servicio" */
+
+/* Pagina "Ubicación" */
+
+/* Pagina "Registro" */
+.registro form{
+    margin: auto;
+    padding: 20px;
+    width: 50%;
+    background: var(--white);
+    border-radius: 8px;
+}
+.registro label{
+    margin: 10px 0;
+    display: block;
+    font-weight: bold;
+}
+.registro input{
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.registro button{
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.registro button:hover{
+    background-color: #09ce0f;
+}
+
+/* Pagina "Login" */
+.login form{
+    margin: auto;
+    padding: 20px;
+    width: 50%;
+    background: var(--white);
+    border-radius: 8px;
+}
+.login label{
+    margin: 10px 0;
+    display: block;
+    font-weight: bold;
+}
+.login input{
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.login button{
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login button:hover{
+    background-color: #09ce0f;
+}
+footer{}
