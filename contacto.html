@@ -4,15 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Veterinaria Huellitas</title>
-    <link rel="stylesheet" href="css/estilos.css" />
+
+    <meta
+      name="description"
+      content="Veterinaria Huellitas ofrece servicios de alta calidad para el cuidado de tus mascotas. Visítanos para consultas, vacunaciones y más."
+    />
+    <meta
+      name="keywords"
+      content="veterinaria, mascotas, servicios veterinarios, vacunación, consultas, cirugías"
+    />
+    <meta name="author" content="Nicolás Coronel" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.2/css/all.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>Veterinaria Huellitas</title>
   </head>
   <body>
+    <!-- Barra de navegación -->
     <header>
-      <!-- <h1 id="titulo">Veterinaria Huellitas</h1> -->
-      <a href="index.html">
-        <img src="img/veterinaria.png" alt="Veterinaria Huellitas" />
-      </a>
-      <nav>        
+      <h1>
+        <a href="index.html">
+          <img src="img/veterinaria.png" alt="Veterinaria Huellitas" />
+        </a>
+      </h1>
+      <nav>
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="servicios.html">Servicios</a></li>
@@ -20,45 +41,128 @@
           <li><a href="galeria.html">Galeria</a></li>
           <li><a href="productos.html">Productos</a></li>
           <li><a href="ubicacion.html">Ubicación</a></li>
-          <li><a href="contacto.html">Contacto</a> </li>
-          <li><a href="http://Educacionit.com" target="_blank">Educacion It</a></li>          
-       </ul>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li>
+            <a href="http://Educacionit.com" target="_blank">Educacion It</a>
+          </li>
+          <li><a href="rami.html">Shami ♡</a></li>
+        </ul>
       </nav>
     </header>
+    <div class="solicita-turno">
+      <a href="solicita-turno.html" class="button-solicita-turno">
+        <i class="fas fa-calendar-alt"></i> Solicitá un turno
+      </a>
+    </div>
     <main>
-        <section class="contacto">
-            <h2>Contacto</h2>
-            <p>Estamos aqui para ayudarte. Si tienes alguna pregunta o necesitas mas información sobre nuestros servicios</p>
-            <p>
-                Tambien podes enviarnos un correo electronico a 
-                <a href="mailto:info@veterinariahuellitas.com.ar">info@veterinariahuellitas.com.ar</a>
-                o llamarnos al
-                <a href="tel:+54911-1234567890">+911-1234567890</a>
-                <a href="https://api.whatsapp.com/send/?phone=541911234567890" target="_blank">
-                    <img src="img/whatsapp.png" alt="">
-                </a>
-            </p>
-            <hr>
-            <form action="codigo.php">
-
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre"/>
-
-                <label for="email">Correo electronico:</label>
-                <input type="email" id="email" name="email" required placeholder="Ingresa tu email"/>
-                
-                <label for="tel">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required placeholder="Ingresa tu número de teléfono"/>
-
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
+      <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <p>
+          Estamos aquí para ayudarte. Si tienes alguna pregunta o necesitas más
+          información sobre nuestros servicios, por favor, no dudes en
+          contactarnos a través del siguiente formulario. <br />Nuestro equipo
+          se pondrá en contacto contigo lo antes posible.
+        </p>
+        <p>
+          Tambien puedes enviarnos un correo electronico a
+          <a href="mailto:info@veterinariahuellitas.com.ar"
+            >info@veterinariahuellitas.com.ar</a
+          >
+          o llamarnos al
+          <a href="tel:+5493878679262">+5493878679262</a>          
+        </p>
+        <form
+          id="contacto-form"
+          action="php/procesar_contacto.php"
+          method="post"
+          novalidate
+        >
+          <div class="form-group">
+            <label for="nombre">Nombre y apellido:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Nombre y apellido"
+              required
+              minlength="3"
+              title="El nombre debe tener al menos 3 caracteres."
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Dirección de email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Introduce una dirección de correo electrónico válida."
+            />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="Teléfono"
+              required
+              pattern="\d{10}"
+              title="Introduce un número de teléfono válido."
+            />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              placeholder="Escribe tu mensaje aquí"
+              required
+              minlength="10"
+              title="El mensaje debe tener al menos 10 caracteres."
+            ></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
     </main>
     <footer>
-        <p>Derechos reservados Veterinaria Huellitas ©2024</p>
+      <p>© 2024 | Veterinaria Huellitas | Todos los derechos reservados</p>
+      <div class="social-media">
+        <p>Síguenos:</p>
+        <a href="https://twitter.com" target="_blank" class="social-icon"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://facebook.com" target="_blank" class="social-icon"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://youtube.com" target="_blank" class="social-icon"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a href="https://linkedin.com" target="_blank" class="social-icon"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a href="https://instagram.com" target="_blank" class="social-icon"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+      <p class="disclaimer">
+        Este sitio fue desarrollado solo para fines académicos.<br />
+        Los nombres, imágenes, videos y marcas comerciales son propiedad de sus
+        dueños.<br />
+        No se pretende ningún uso comercial ni infracción de derechos de autor.
+      </p>
     </footer>
+    <a
+      href="https://api.whatsapp.com/send/?phone=5493878679262"
+      class="whatsapp-float"
+      target="_blank"
+    >
+      <img src="img/whatsapp.webp" alt="WhatsApp" />
+    </a>
   </body>
 </html>
